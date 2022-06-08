@@ -84,6 +84,11 @@ public class Main {
 		
 														*/
 		
+		BST bst = new BST(4);
+		bst.insert(1);
+		bst.insert(4);
+		bst.insert(3);
+		
 		
 		
 	}
