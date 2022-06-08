@@ -11,7 +11,9 @@ public class Stack <T> extends SinglyLL<T>{
 		head = newnode;
 		
 	}
-	
+	public T peek() {
+		return head.data;
+	}
 	public T pop() {
 		Node temp = head;
 		head = head.next;
