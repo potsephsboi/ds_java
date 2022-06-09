@@ -84,12 +84,33 @@ public class Main {
 		
 														*/
 		
-		BST bst = new BST(4);
-		bst.insert(1);
-		bst.insert(4);
+		BST bst = new BST(5);
 		bst.insert(3);
+		bst.insert(7);
+		bst.insert(2);
+		bst.insert(10);
+		bst.insert(11);
+		bst.printLevelOrder(bst.root);
 		
+		bst.delete(7);			
 		
+		System.out.println();
+		bst.printLevelOrder(bst.root);
+		
+		bst.delete(3);
+		
+		System.out.println();
+		bst.printLevelOrder(bst.root);
+		
+		bst.insert(9);
+		
+		System.out.println();
+		bst.printLevelOrder(bst.root);
+		
+		bst.delete(10);
+		
+		System.out.println();
+		bst.printLevelOrder(bst.root);
 		
 	}
 	
