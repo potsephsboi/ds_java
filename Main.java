@@ -91,26 +91,8 @@ public class Main {
 		bst.insert(10);
 		bst.insert(11);
 		bst.printLevelOrder(bst.root);
-		
-		bst.delete(7);			
-		
 		System.out.println();
-		bst.printLevelOrder(bst.root);
 		
-		bst.delete(3);
-		
-		System.out.println();
-		bst.printLevelOrder(bst.root);
-		
-		bst.insert(9);
-		
-		System.out.println();
-		bst.printLevelOrder(bst.root);
-		
-		bst.delete(10);
-		
-		System.out.println();
-		bst.printLevelOrder(bst.root);
 		
 	}
 	

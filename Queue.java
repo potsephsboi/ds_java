@@ -2,22 +2,25 @@ package ds_java;
 
 public class Queue <T> extends SinglyLL<T>{
 	Node head, tail;
-	 
+	int length = 0;
+	
 	public Queue() {
 		this.head = this.tail = null;
 	}
+	
 	
 	public void enqueue(T data) {
 		
 		Node newnode = new Node(data);
 		if (this.tail == null) {
             this.head = this.tail = newnode;
+            length += 1;
             return;
         }
 		
 		this.tail.next = newnode;
 		this.tail = newnode;
-		
+		length += 1;
 	}
 	
 	public T dequeue() {
@@ -33,6 +36,8 @@ public class Queue <T> extends SinglyLL<T>{
 		
 		return temp.data;
 	}
+	
+	
 	
 	public void showQueue() {
 		Node trav = this.head;
