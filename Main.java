@@ -83,7 +83,10 @@ public class Main {
 		uf.unify(uf.NodesLst.get(1), uf.NodesLst.get(4));
 		
 														*/
+		// --------------------------------//
 		
+		
+	/*	
 		BST bst = new BST(5);
 		bst.insert(3);
 		bst.insert(7);
@@ -93,6 +96,14 @@ public class Main {
 		bst.printLevelOrder(bst.root);
 		System.out.println();
 		
+														*/
+		
+		HashTable<String, Integer> ht = new HashTable<String, Integer>(16);
+		ht.add("hey", 5);
+		ht.add("Hello", 6);
+		ht.delete("hey");
+		ht.clear();
+		System.out.println(ht.isEmty());
 		
 	}
 	

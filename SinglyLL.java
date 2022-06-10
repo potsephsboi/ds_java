@@ -3,6 +3,7 @@ package ds_java;
 
 public class SinglyLL <T>{
 	Node head;
+
 	
 	public class Node{
 		T data;
@@ -86,25 +87,6 @@ public class SinglyLL <T>{
 		
 	}
 	
-	public void delete_key(T key) {
-		boolean found = false;
-		Node trav = head;
-		while (trav != null) {
-			if (trav.next.data == key) {
-				found = true;
-				break;
-			}
-			trav = trav.next;
-			
-		}
-		if (found) {
-			Node del = trav.next;
-			trav.next = del.next;
-			System.gc();
-		}
-		else { return; }
-		
-	}
 	
 	public void show() {
 		Node temp = head;
@@ -113,6 +95,7 @@ public class SinglyLL <T>{
 			temp = temp.next;
 		}
 	}
+	
 	
 	
 	
