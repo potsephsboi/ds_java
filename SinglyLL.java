@@ -1,7 +1,7 @@
 package ds_java;
 
 
-public class SinglyLL <T>{
+public class SinglyLL <T> {
 	Node head;
 
 	
@@ -87,13 +87,26 @@ public class SinglyLL <T>{
 		
 	}
 	
+	public void clear() {
+		Node temp = head;
+		while (temp != null) {		
+			temp.next = temp;
+			head = null;
+			head = temp;
+		}
+	}
 	
 	public void show() {
 		Node temp = head;
+		if (head == null) {
+		System.out.println("linked list is empty");
+		return;
+		}
 		while (temp != null) {
 			System.out.println(temp.data);
 			temp = temp.next;
 		}
+		
 	}
 	
 	

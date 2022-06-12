@@ -6,8 +6,8 @@ public class Main {
 	// driver code
 	public static void main(String[] args) {
 
-		
-	/*	
+			
+	/*
 		SinglyLL<Integer> ll = new SinglyLL<Integer>();
 		for (Integer i = 0; i < 5; i++) {
 			ll.InsertFront(i);
@@ -15,15 +15,16 @@ public class Main {
 		ll.show();
 		System.out.println();
 		
-
+		
 		ll.InsertAfterKey(12, 1);
 		ll.InsertFront(5);
 		ll.InsertTail(3);
-		ll.delete_key(0);
+		ll.DeleteKey(0);
+		ll.show();
+		System.out.println();
+		ll.clear();
 		ll.show();
 														*/
-		
-		
 		// --------------------------------//
 		
 	

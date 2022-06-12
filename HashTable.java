@@ -17,9 +17,35 @@ public class HashTable <K, V> {
 		table = new SinglyLL[this.capacity];
 	}
 	
-	
+	@SuppressWarnings("unchecked")
 	private void resizeTable() {
-		// TODO Auto-generated method stub	
+		capacity *= 2;
+		threshold = (int) (capacity * DEFAULT_LOAD_FACTOR);
+		SinglyLL <Entry<K, V>> newtable [];
+		newtable = new SinglyLL[this.capacity];
+		for (int i = 0; i < table.length; i ++) {
+			
+			SinglyLL <Entry <K, V>> bucket = table[i];
+			SinglyLL<Entry<K, V>>.Node trav = bucket.head;
+			
+			if (trav == null) {			
+				newtable[i] = null;
+			}
+			else {
+				while(trav != null) {
+					Entry <K, V> entry = trav.data;
+					newtable[i].InsertTail(entry);
+					trav = trav.next;
+				}
+				
+			}
+			
+			table[i].clear();
+			
+			
+		}
+		
+	
 	}
 	
 	private int normalizeIndex(int keyHash) {
