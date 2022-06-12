@@ -1,5 +1,7 @@
-package ds_java;
+// Hash table implementation using seperate chaining (linked lists method) 
 
+package ds_java;
+ 
 
 public class HashTable <K, V> {
 	
@@ -155,28 +157,18 @@ public class HashTable <K, V> {
 
 }
 
-
 /*
- while (trav.next != null) {
-			if (trav.next.data.key == key) {
-				SinglyLL<Entry<K, V>>.Node temp = trav.next;
-				trav.next = trav.next.next;
-				size--;
-				
-				V temp_data = temp.data.value;
-				temp = null;	
-				return temp_data;
-			}
-			trav_prev = trav;
-			trav = trav.next;
-		}
-		if (trav.data.key == key) {
-			V temp_data = trav.data.value;
-			trav_prev.next = null;
-			trav = null;
-			return temp_data;
-		}
-		
-		return null;
- */
- 
+	- Open addressing pseudo code -
+	
+x := 1
+keyhash := H(x) mod N
+index := keyhash
+
+while table[index] != null:
+	index = (H(x) + P(N, x)) mod N 
+	x += 1
+
+table[index] = entry<K, V>
+
+
+*/
